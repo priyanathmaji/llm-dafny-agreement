@@ -1,0 +1,96 @@
+{"doc_id": "NCT03255044", "atom_count": 1, "atom_vars": ["max_serum_creatinine"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT02937779", "atom_count": 1, "atom_vars": ["min_creatinine_clearance_ml_min"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 1, "tier": "high"}
+{"doc_id": "NCT02958566", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 1, "tier": "high"}
+{"doc_id": "NCT01352598", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT02529475", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 2, "tier": "high"}
+{"doc_id": "NCT02202369", "atom_count": 3, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT00586898", "atom_count": 7, "atom_vars": ["age", "max_ast_alt_uln", "max_serum_creatinine", "max_total_bilirubin_uln", "min_creatinine_clearance_ml_min", "min_platelet_count", "min_wbc_count"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT03013790", "atom_count": 3, "atom_vars": ["age", "min_life_expectancy_months"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 0, "tier": "high"}
+{"doc_id": "NCT01680081", "atom_count": 1, "atom_vars": ["min_egfr_ml_min"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT02939209", "atom_count": 1, "atom_vars": ["bmi"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT02964416", "atom_count": 3, "atom_vars": ["age", "bmi"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 5, "tier": "high"}
+{"doc_id": "NCT01401335", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 0, "tier": "high"}
+{"doc_id": "NCT02842424", "atom_count": 1, "atom_vars": ["min_egfr_ml_min"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 5, "tier": "high"}
+{"doc_id": "NCT03138577", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 4, "tier": "high"}
+{"doc_id": "NCT02822001", "atom_count": 1, "atom_vars": ["min_creatinine_clearance_ml_min"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 2, "tier": "high"}
+{"doc_id": "NCT03355326", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 4, "tier": "high"}
+{"doc_id": "NCT02721017", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 2, "tier": "high"}
+{"doc_id": "NCT02589977", "atom_count": 5, "atom_vars": ["min_egfr_ml_min", "min_left_ventricular_ejection_fraction"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT02974686", "atom_count": 4, "atom_vars": ["min_egfr_ml_min", "min_hemoglobin_g_dl", "min_platelet_count", "min_wbc_count"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 4, "tier": "high"}
+{"doc_id": "NCT02413970", "atom_count": 2, "atom_vars": ["age", "min_life_expectancy_months"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 4, "tier": "high"}
+{"doc_id": "NCT02872090", "atom_count": 1, "atom_vars": ["min_fvc_percent"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 1, "tier": "high"}
+{"doc_id": "NCT03126214", "atom_count": 2, "atom_vars": ["min_creatinine_clearance_ml_min", "min_left_ventricular_ejection_fraction"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT02689089", "atom_count": 1, "atom_vars": ["max_ast_alt_uln"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT02429583", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 0, "tier": "high"}
+{"doc_id": "NCT03199560", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 5, "tier": "high"}
+{"doc_id": "NCT03012984", "atom_count": 3, "atom_vars": ["age", "min_left_ventricular_ejection_fraction"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT03471117", "atom_count": 1, "atom_vars": ["min_hemoglobin_g_dl"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 5, "tier": "high"}
+{"doc_id": "NCT01314898", "atom_count": 1, "atom_vars": ["bmi"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 0, "tier": "high"}
+{"doc_id": "NCT02563535", "atom_count": 2, "atom_vars": ["age", "min_life_expectancy_months"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 4, "tier": "high"}
+{"doc_id": "NCT03176316", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT03192020", "atom_count": 2, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT02705222", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 1, "tier": "high"}
+{"doc_id": "NCT02612181", "atom_count": 3, "atom_vars": ["age", "max_systolic_blood_pressure"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 2, "tier": "high"}
+{"doc_id": "NCT02607748", "atom_count": 2, "atom_vars": ["age", "max_serum_creatinine"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 1, "tier": "high"}
+{"doc_id": "NCT03511521", "atom_count": 1, "atom_vars": ["min_egfr_ml_min"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 0, "tier": "high"}
+{"doc_id": "NCT02774317", "atom_count": 1, "atom_vars": ["max_inr"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT03225469", "atom_count": 2, "atom_vars": ["age", "min_creatinine_clearance_ml_min"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 4, "tier": "high"}
+{"doc_id": "NCT01491763", "atom_count": 3, "atom_vars": ["max_serum_creatinine", "max_total_bilirubin_uln"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 2, "tier": "high"}
+{"doc_id": "NCT02558504", "atom_count": 3, "atom_vars": ["age", "max_inr", "min_platelet_count"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 20, "tier": "high"}
+{"doc_id": "NCT02055053", "atom_count": 2, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT02579200", "atom_count": 2, "atom_vars": ["min_fvc_percent"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT02589691", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT01768195", "atom_count": 1, "atom_vars": ["min_life_expectancy_months"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 0, "tier": "high"}
+{"doc_id": "NCT03185130", "atom_count": 1, "atom_vars": ["max_body_temperature"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 2, "tier": "high"}
+{"doc_id": "NCT03120533", "atom_count": 2, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 15, "tier": "high"}
+{"doc_id": "NCT02890719", "atom_count": 3, "atom_vars": ["max_total_bilirubin_uln", "min_hemoglobin_g_dl", "min_platelet_count"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT01205334", "atom_count": 4, "atom_vars": ["max_ast_alt_uln", "max_total_bilirubin_uln", "min_karnofsky_status", "min_life_expectancy_months"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 6, "tier": "high"}
+{"doc_id": "NCT02546856", "atom_count": 2, "atom_vars": ["min_left_ventricular_ejection_fraction", "min_life_expectancy_months"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 5, "tier": "high"}
+{"doc_id": "NCT03187639", "atom_count": 1, "atom_vars": ["min_life_expectancy_months"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 2, "tier": "high"}
+{"doc_id": "NCT02691793", "atom_count": 7, "atom_vars": ["age", "max_alt_uln", "max_ast_alt_uln", "max_serum_creatinine", "max_total_bilirubin_uln", "min_hemoglobin_g_dl", "min_platelet_count"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 2, "tier": "high"}
+{"doc_id": "NCT00609531", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 8, "tier": "high"}
+{"doc_id": "NCT01715584", "atom_count": 4, "atom_vars": ["age", "min_creatinine_clearance_ml_min", "min_left_ventricular_ejection_fraction"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 1, "tier": "high"}
+{"doc_id": "NCT02570321", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 1, "tier": "high"}
+{"doc_id": "NCT03004261", "atom_count": 5, "atom_vars": ["age", "max_alt_uln", "max_ast_alt_uln", "max_serum_creatinine", "max_total_bilirubin_uln"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 0, "tier": "high"}
+{"doc_id": "NCT02046395", "atom_count": 2, "atom_vars": ["min_egfr_ml_min"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT02900443", "atom_count": 1, "atom_vars": ["max_inr"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 4, "tier": "high"}
+{"doc_id": "NCT02102243", "atom_count": 1, "atom_vars": ["max_serum_creatinine"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 1, "tier": "high"}
+{"doc_id": "NCT00970866", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 1, "tier": "high"}
+{"doc_id": "NCT01118871", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 11, "tier": "high"}
+{"doc_id": "NCT01943812", "atom_count": 1, "atom_vars": ["bmi"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 1, "tier": "high"}
+{"doc_id": "NCT02713087", "atom_count": 2, "atom_vars": ["age", "min_egfr_ml_min"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 0, "tier": "high"}
+{"doc_id": "NCT02952378", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 0, "tier": "high"}
+{"doc_id": "NCT03344042", "atom_count": 1, "atom_vars": ["min_platelet_count"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 2, "tier": "high"}
+{"doc_id": "NCT01803438", "atom_count": 3, "atom_vars": ["min_left_ventricular_ejection_fraction", "min_platelet_count"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 9, "tier": "high"}
+{"doc_id": "NCT03132259", "atom_count": 1, "atom_vars": ["bmi"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 1, "tier": "high"}
+{"doc_id": "NCT02609425", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT03247413", "atom_count": 2, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 1, "tier": "high"}
+{"doc_id": "NCT01895946", "atom_count": 1, "atom_vars": ["min_life_expectancy_months"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 2, "tier": "high"}
+{"doc_id": "NCT00317148", "atom_count": 1, "atom_vars": ["bmi"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT03472495", "atom_count": 1, "atom_vars": ["max_systolic_blood_pressure"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 4, "tier": "high"}
+{"doc_id": "NCT02892968", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 0, "tier": "high"}
+{"doc_id": "NCT03465397", "atom_count": 4, "atom_vars": ["min_hemoglobin_g_dl", "min_platelet_count", "min_wbc_count"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 4, "tier": "high"}
+{"doc_id": "NCT02844907", "atom_count": 1, "atom_vars": ["min_egfr_ml_min"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 4, "tier": "high"}
+{"doc_id": "NCT03339284", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT02186782", "atom_count": 2, "atom_vars": ["age", "bmi"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 0, "tier": "high"}
+{"doc_id": "NCT03122119", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 2, "tier": "high"}
+{"doc_id": "NCT03623789", "atom_count": 4, "atom_vars": ["age", "min_hemoglobin_g_dl"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 2, "tier": "high"}
+{"doc_id": "NCT02969187", "atom_count": 1, "atom_vars": ["bmi"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 9, "tier": "high"}
+{"doc_id": "NCT02370069", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 1, "tier": "high"}
+{"doc_id": "NCT02242188", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 0, "tier": "high"}
+{"doc_id": "NCT03280017", "atom_count": 1, "atom_vars": ["bmi"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 4, "tier": "high"}
+{"doc_id": "NCT03499639", "atom_count": 1, "atom_vars": ["max_child_pugh_score"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 0, "tier": "high"}
+{"doc_id": "NCT00965900", "atom_count": 6, "atom_vars": ["max_child_pugh_score", "max_inr", "max_systolic_blood_pressure", "min_platelet_count"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 1, "tier": "high"}
+{"doc_id": "NCT02859480", "atom_count": 2, "atom_vars": ["max_serum_creatinine", "min_life_expectancy_months"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT03140488", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 2, "tier": "high"}
+{"doc_id": "NCT01483118", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 2, "tier": "high"}
+{"doc_id": "NCT03026465", "atom_count": 1, "atom_vars": ["min_life_expectancy_months"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT03335904", "atom_count": 2, "atom_vars": ["bmi", "min_fvc_percent"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 1, "tier": "high"}
+{"doc_id": "NCT01639664", "atom_count": 2, "atom_vars": ["age", "min_life_expectancy_months"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 3, "tier": "high"}
+{"doc_id": "NCT01757717", "atom_count": 4, "atom_vars": ["max_inr", "min_platelet_count", "min_wbc_count"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 6, "tier": "high"}
+{"doc_id": "NCT02334722", "atom_count": 2, "atom_vars": ["age", "min_creatinine_clearance_ml_min"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 2, "tier": "high"}
+{"doc_id": "NCT02427295", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 2, "tier": "high"}
+{"doc_id": "NCT02553226", "atom_count": 1, "atom_vars": ["age"], "has_temporal_numeric": false, "qualifies": true, "has_negation": false, "connective_count": 4, "tier": "high"}
+{"doc_id": "NCT00943865", "atom_count": 3, "atom_vars": ["bmi", "max_ast_alt_uln", "max_serum_creatinine"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 2, "tier": "high"}
+{"doc_id": "NCT01650792", "atom_count": 3, "atom_vars": ["age", "max_body_temperature", "min_wbc_count"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 1, "tier": "high"}
+{"doc_id": "NCT03208244", "atom_count": 1, "atom_vars": ["min_platelet_count"], "has_temporal_numeric": false, "qualifies": true, "has_negation": true, "connective_count": 0, "tier": "high"}

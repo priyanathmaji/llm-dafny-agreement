@@ -1,0 +1,199 @@
+{
+  "builder_name": "parquet",
+  "citation": "@article{kury2020chia,\n  title        = {Chia, a large annotated corpus of clinical trial eligibility criteria},\n  author       = {\n    Kury, Fabr{'\\i}cio and Butler, Alex and Yuan, Chi and Fu, Li-heng and\n    Sun, Yingcheng and Liu, Hao and Sim, Ida and Carini, Simona and Weng,\n    Chunhua\n  },\n  year         = 2020,\n  journal      = {Scientific data},\n  publisher    = {Nature Publishing Group},\n  volume       = 7,\n  number       = 1,\n  pages        = {1--11}\n}\n",
+  "config_name": "chia_bigbio_kb",
+  "dataset_name": "chia",
+  "dataset_size": 6582878,
+  "description": "A large annotated corpus of patient eligibility criteria extracted from 1,000\ninterventional, Phase IV clinical trials registered in ClinicalTrials.gov. This\ndataset includes 12,409 annotated eligibility criteria, represented by 41,487\ndistinctive entities of 15 entity types and 25,017 relationships of 12\nrelationship types.\n",
+  "download_checksums": {
+    "hf://datasets/bigbio/chia@b3296f43da51c5d703afce13dd435096af89f4cc/chia_bigbio_kb/train/0000.parquet": {
+      "num_bytes": 2083712,
+      "checksum": null
+    }
+  },
+  "download_size": 2083712,
+  "features": {
+    "id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "document_id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "passages": [
+      {
+        "id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "text": {
+          "feature": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "_type": "Sequence"
+        },
+        "offsets": {
+          "feature": [
+            {
+              "dtype": "int32",
+              "_type": "Value"
+            }
+          ],
+          "_type": "Sequence"
+        }
+      }
+    ],
+    "entities": [
+      {
+        "id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "text": {
+          "feature": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "_type": "Sequence"
+        },
+        "offsets": {
+          "feature": [
+            {
+              "dtype": "int32",
+              "_type": "Value"
+            }
+          ],
+          "_type": "Sequence"
+        },
+        "normalized": [
+          {
+            "db_name": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "db_id": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "trigger": {
+          "text": {
+            "feature": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "_type": "Sequence"
+          },
+          "offsets": {
+            "feature": [
+              {
+                "dtype": "int32",
+                "_type": "Value"
+              }
+            ],
+            "_type": "Sequence"
+          }
+        },
+        "arguments": [
+          {
+            "role": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "ref_id": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          }
+        ]
+      }
+    ],
+    "coreferences": [
+      {
+        "id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "entity_ids": {
+          "feature": {
+            "dtype": "string",
+            "_type": "Value"
+          },
+          "_type": "Sequence"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "type": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "arg1_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "arg2_id": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "normalized": [
+          {
+            "db_name": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "db_id": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "homepage": "https://github.com/WengLab-InformaticsResearch/CHIA",
+  "license": "Creative Commons Attribution 4.0 International",
+  "size_in_bytes": 8666590,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 6582878,
+      "num_examples": 2000,
+      "dataset_name": "chia"
+    }
+  },
+  "version": {
+    "version_str": "1.0.0",
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  }
+}

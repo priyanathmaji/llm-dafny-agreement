@@ -1,0 +1,568 @@
+========================================================================
+CROSS-AGENT RESULTS AGGREGATION
+========================================================================
+Input file:          cross_agent_results_gpt-4.1-nano_spec__gpt-4.1-mini_impl.jsonl
+Specifier model:     gpt-4.1-nano
+Implementer model:   gpt-4.1-mini
+Total documents attempted: 96
+
+========================================================================
+1. CATEGORY BREAKDOWN
+========================================================================
+                       GENUINE_AGREEMENT:  44 / 96 (45.8%)
+             NON_CONVERGENT_COVERAGE_GAP:  23 / 96 (24.0%)
+     NON_CONVERGENT_DIRECT_CONTRADICTION:  16 / 96 (16.7%)
+                         SPECIFIER_EMPTY:  12 / 96 (12.5%)
+                      GENERATION_FAILURE:   1 / 96 (1.0%)
+
+========================================================================
+2. PRIMARY SEMANTIC EVALUATION DENOMINATOR
+========================================================================
+Excluded as non-semantic/integrity failures: 13 / 96 (13.5%)
+Semantically evaluated: 83 / 96 (86.5%)
+
+Semantic outcomes:
+                       GENUINE_AGREEMENT: 44 / 83 (53.0%)
+             NON_CONVERGENT_COVERAGE_GAP: 23 / 83 (27.7%)
+     NON_CONVERGENT_DIRECT_CONTRADICTION: 16 / 83 (19.3%)
+
+========================================================================
+3. AGREEMENT
+========================================================================
+Raw genuine agreement: 44 / 83 (53.0%)
+Raw agreement over all attempted documents: 44 / 96 (45.8%)
+
+========================================================================
+4. IMPLEMENTER COVERAGE OF SPECIFIER VARIABLES
+========================================================================
+Coverage denominator: 83 / 96 attempted documents
+Coverage exclusions: 13 documents
+Mean coverage ratio: 76.4%
+Full coverage (100%): 49 / 83 (59.0%)
+Zero coverage (0%):   8 / 83 (9.6%)
+
+========================================================================
+5. SPECIFIER COMPLEXITY
+========================================================================
+Complexity denominator: 83 documents
+Mean Specifier atom count: 2.2
+Minimum: 1
+Maximum: 12
+
+========================================================================
+6. OUTCOME BY SPECIFIER ATOM-COUNT BUCKET
+========================================================================
+
+ 1-3 atoms (70 documents)
+  Agreement: 43/70 (61.4%)
+                       GENUINE_AGREEMENT: 43/70 (61.4%)
+             NON_CONVERGENT_COVERAGE_GAP: 20/70 (28.6%)
+     NON_CONVERGENT_DIRECT_CONTRADICTION: 7/70 (10.0%)
+
+ 4-7 atoms (12 documents)
+  Agreement: 1/12 (8.3%)
+     NON_CONVERGENT_DIRECT_CONTRADICTION: 9/12 (75.0%)
+             NON_CONVERGENT_COVERAGE_GAP: 2/12 (16.7%)
+                       GENUINE_AGREEMENT: 1/12 (8.3%)
+
+  8+ atoms (1 documents)
+  Agreement: 0/1 (0.0%)
+             NON_CONVERGENT_COVERAGE_GAP: 1/1 (100.0%)
+
+========================================================================
+7. MUTATION ADEQUACY
+========================================================================
+Mutation denominator: 44 genuinely agreed specifications
+Adequate:   43/44 (97.7%)
+INADEQUATE: 1/44 (2.3%)
+
+Inadequate documents:
+  NCT02429583: failing_mutant='' detail='spec is unsatisfiable (over-constrained)'
+
+========================================================================
+8. VERIFICATION-GAMING AUDIT
+========================================================================
+Audited genuine-agreement cases: 44
+Direct MatchSpec invocation cases: 0/44
+Corrected genuine agreement: 44/83 (53.0%)
+
+========================================================================
+9. CONTRADICTION DIAGNOSTICS
+========================================================================
+Direct contradiction records: 16
+
+--- NCT00965900 ---
+Shared variables:       3
+Exactly matching:       1
+Contradictory variables: 1
+Contradiction variables: ['max_systolic_blood_pressure']
+Specifier atoms: [['age', '<=', 70.0], ['max_systolic_blood_pressure', '<', 100.0], ['max_inr', '<=', 1.7], ['max_platelet_count', '<', 30000.0]]
+Implementer atoms: [['age', '>=', 18.0], ['age', '<=', 70.0], ['max_systolic_blood_pressure', '>=', 100.0], ['min_basal_heart_rate_per_min', '>=', 60.0], ['min_prothrombin_time_percent', '>=', 40.0], ['max_inr', '<=', 1.7], ['min_platelet_count', '>=', 30000.0]]
+
+--- NCT01352598 ---
+Shared variables:       2
+Exactly matching:       1
+Contradictory variables: 1
+Contradiction variables: ['prostate_volume_cc']
+Specifier atoms: [['age', '>=', 18.0], ['prostate_volume_cc', '>', 100.0]]
+Implementer atoms: [['age', '>=', 18.0], ['prostate_volume_cc', '==', 100.0]]
+
+--- NCT01639664 ---
+Shared variables:       1
+Exactly matching:       0
+Contradictory variables: 1
+Contradiction variables: ['age']
+Specifier atoms: [['age', '<', 14.0], ['max_life_expectancy_years', '<', 0.25]]
+Implementer atoms: [['age', '>=', 14.0], ['min_life_expectancy_months', '>=', 3.0]]
+
+--- NCT01715584 ---
+Shared variables:       3
+Exactly matching:       0
+Contradictory variables: 2
+Contradiction variables: ['min_creatinine_clearance_ml_min', 'min_left_ventricular_ejection_fraction']
+Specifier atoms: [['age', '>', 40.0], ['max_age', '<=', 80.0], ['min_left_ventricular_ejection_fraction', '<', 50.0], ['min_creatinine_clearance_ml_min', '<', 60.0]]
+Implementer atoms: [['age', '>', 40.0], ['age', '<=', 80.0], ['min_left_ventricular_ejection_fraction', '>=', 50.0], ['min_creatinine_clearance_ml_min', '>=', 60.0]]
+
+--- NCT01943812 ---
+Shared variables:       4
+Exactly matching:       2
+Contradictory variables: 2
+Contradiction variables: ['bmi', 'endometrial_thickness_mm']
+Specifier atoms: [['endometrial_thickness_mm', '>=', 7.0], ['age', '>=', 18.0], ['age', '<=', 45.0], ['bmi', '<=', 30.0], ['bmi', '>', 18.5], ['cycle_length_days', '>=', 25.0], ['cycle_length_days', '<=', 34.0]]
+Implementer atoms: [['endometrial_thickness_mm', '==', 7.0], ['age', '>=', 18.0], ['age', '<=', 45.0], ['bmi', '>', 18.5], ['bmi', '<', 30.0], ['cycle_length_days', '>=', 25.0], ['cycle_length_days', '<=', 34.0]]
+
+--- NCT02202369 ---
+Shared variables:       1
+Exactly matching:       0
+Contradictory variables: 1
+Contradiction variables: ['age']
+Specifier atoms: [['age', '<', 70.0], ['age', '>', 18.0], ['preoperative_chronic_opiate_use_mg_per_day', '>', 30.0]]
+Implementer atoms: [['age', '>=', 18.0], ['age', '<', 70.0], ['max_opioid_morphine_equivalents_mg_per_day', '<=', 30.0], ['min_egfr_ml_min', '>=', 60.0]]
+
+--- NCT02558504 ---
+Shared variables:       2
+Exactly matching:       1
+Contradictory variables: 1
+Contradiction variables: ['age']
+Specifier atoms: [['age', '<', 18.0], ['max_lesion_length_cm', '<=', 12.0]]
+Implementer atoms: [['age', '>=', 18.0], ['asa_classification', '>=', 1.0], ['asa_classification', '<=', 2.0], ['min_lesion_length_cm', '>=', 1.0], ['max_lesion_length_cm', '<=', 12.0], ['max_inr', '<=', 1.3], ['min_platelet_count', '>=', 75000.0], ['min_life_expectancy_months', '>=', 36.0], ['min_egfr_ml_min', '>=', 60.0], ['max_time_since_heart_attack_months', '>', 6.0], ['max_severe_distal_arteriopathy_stage', '<=', 2.0]]
+
+--- NCT02612181 ---
+Shared variables:       4
+Exactly matching:       1
+Contradictory variables: 3
+Contradiction variables: ['age', 'max_systolic_blood_pressure', 'max_mean_arterial_pressure']
+Specifier atoms: [['age', '<', 18.0], ['heart_rate_less_than', '<', 55.0], ['max_systolic_blood_pressure', '<', 80.0], ['max_mean_arterial_pressure', '<', 50.0]]
+Implementer atoms: [['age', '>=', 18.0], ['heart_rate_less_than', '<', 55.0], ['max_systolic_blood_pressure', '>=', 80.0], ['max_mean_arterial_pressure', '>=', 50.0]]
+
+--- NCT02774317 ---
+Shared variables:       2
+Exactly matching:       1
+Contradictory variables: 1
+Contradiction variables: ['age']
+Specifier atoms: [['age', '<=', 6.0], ['max_inr', '>=', 1.5]]
+Implementer atoms: [['age', '<=', 0.5], ['max_inr', '>=', 1.5]]
+
+--- NCT02859480 ---
+Shared variables:       3
+Exactly matching:       0
+Contradictory variables: 3
+Contradiction variables: ['max_ast_alt_uln', 'max_serum_creatinine', 'max_alt_uln']
+Specifier atoms: [['max_serum_creatinine', '>', 2.0], ['max_ast_alt_uln', '>=', 3.0], ['max_alt_uln', '>=', 3.0], ['max_life_expectancy_years', '<', 1.0]]
+Implementer atoms: [['max_serum_creatinine', '<=', 2.0], ['max_ast_alt_uln', '<=', 3.0], ['max_alt_uln', '<=', 3.0], ['min_life_expectancy_months', '>=', 12.0]]
+
+--- NCT02939209 ---
+Shared variables:       2
+Exactly matching:       1
+Contradictory variables: 1
+Contradiction variables: ['bmi']
+Specifier atoms: [['age', '<=', 65.0], ['age', '>=', 18.0], ['renal_function_gfr_threshold', '<=', 60.0], ['bmi', '>', 35.0]]
+Implementer atoms: [['age', '>=', 18.0], ['age', '<=', 65.0], ['min_creatinine_clearance_ml_min', '>=', 60.0], ['bmi', '<=', 35.0]]
+
+--- NCT02969187 ---
+Shared variables:       1
+Exactly matching:       0
+Contradictory variables: 1
+Contradiction variables: ['bmi']
+Specifier atoms: [['bmi', '<', 35.0], ['bmi', '>', 60.0], ['asa_classification', '>', 3.0]]
+Implementer atoms: [['bmi', '>=', 35.0], ['bmi', '<=', 60.0], ['methylprednisolone_prednisone_daily_dose_mg', '<', 60.0], ['methylprednisolone_prednisone_doses_per_day', '<', 3.0], ['asa_physical_status_max', '<=', 3.0]]
+
+--- NCT03012984 ---
+Shared variables:       3
+Exactly matching:       2
+Contradictory variables: 1
+Contradiction variables: ['stop_bang_score']
+Specifier atoms: [['age', '>=', 65.0], ['age', '<', 90.0], ['expected_duration_of_surgery_hours', '>=', 2.0], ['stop_bang_score', '>=', 3.0]]
+Implementer atoms: [['age', '>=', 65.0], ['age', '<', 90.0], ['expected_duration_of_surgery_hours', '>=', 2.0], ['stop_bang_score', '<', 3.0], ['min_left_ventricular_ejection_fraction', '>=', 30.0], ['heart_rate_beats_per_minute', '>=', 50.0]]
+
+--- NCT03013790 ---
+Shared variables:       2
+Exactly matching:       1
+Contradictory variables: 1
+Contradiction variables: ['age']
+Specifier atoms: [['age', '>', 65.0], ['max_inr', '<=', 3.0]]
+Implementer atoms: [['age', '>=', 65.0], ['max_inr', '<=', 3.0], ['min_life_expectancy_months', '>=', 0.0625]]
+
+--- NCT03126214 ---
+Shared variables:       4
+Exactly matching:       3
+Contradictory variables: 1
+Contradiction variables: ['max_systolic_blood_pressure']
+Specifier atoms: [['age', '>=', 65.0], ['cerebrovascular_lesion_exclusion_months', '<=', 0.0], ['max_systolic_blood_pressure', '<=', 160.0], ['max_alcohol_units_per_week_male', '<=', 28.0], ['max_alcohol_units_per_week_female', '<=', 21.0], ['max_severe_distal_arteriopathy_stage', '<=', 5.0]]
+Implementer atoms: [['age', '>=', 65.0], ['max_systolic_blood_pressure', '<', 160.0], ['max_alcohol_units_per_week_male', '<=', 28.0], ['max_alcohol_units_per_week_female', '<=', 21.0], ['min_creatinine_clearance_ml_min', '>=', 15.0], ['min_left_ventricular_ejection_fraction', '>=', 0.4], ['beck_depression_inventory_score_limit', '<=', 5.0]]
+
+--- NCT03472495 ---
+Shared variables:       2
+Exactly matching:       1
+Contradictory variables: 1
+Contradiction variables: ['max_systolic_blood_pressure']
+Specifier atoms: [['age', '>=', 18.0], ['heart_rate_greater_than', '>', 110.0], ['max_systolic_blood_pressure', '<=', 90.0], ['heart_rate_less_than', '<', 60.0]]
+Implementer atoms: [['age', '>=', 18.0], ['heart_rate_beats_per_minute', '<', 60.0], ['max_systolic_blood_pressure', '>=', 90.0]]
+
+========================================================================
+10. QUALITATIVE CONTRADICTION CASES WITH DAFNY
+========================================================================
+
+--- NCT00965900 (contradiction on ['max_systolic_blood_pressure']) ---
+Specifier atoms:   [['age', '<=', 70.0], ['max_systolic_blood_pressure', '<', 100.0], ['max_inr', '<=', 1.7], ['max_platelet_count', '<', 30000.0]]
+Implementer atoms: [['age', '>=', 18.0], ['age', '<=', 70.0], ['max_systolic_blood_pressure', '>=', 100.0], ['min_basal_heart_rate_per_min', '>=', 60.0], ['min_prothrombin_time_percent', '>=', 40.0], ['max_inr', '<=', 1.7], ['min_platelet_count', '>=', 30000.0]]
+
+--- Specifier's Dafny predicate (gpt-4.1-nano) ---
+predicate MatchSpec(age: int, max_systolic_blood_pressure: real, max_inr: real, max_platelet_count: int)
+{
+    age <= 70 &&
+    max_systolic_blood_pressure < 100.0 &&
+    max_inr <= 1.7 &&
+    max_platelet_count < 30000
+}
+
+--- Implementer's Dafny method (gpt-4.1-mini) ---
+method CheckEligibility(age: int, max_systolic_blood_pressure: real, max_inr: real, max_platelet_count: int) returns (eligible: bool)
+  ensures eligible == MatchSpec(age, max_systolic_blood_pressure, max_inr, max_platelet_count)
+{
+  eligible := (age >= 18) && (age <= 70) &&
+              (max_systolic_blood_pressure >= 100.0) &&
+              (max_inr <= 1.7) &&
+              (max_platelet_count >= 30000);
+}
+
+--- NCT01352598 (contradiction on ['prostate_volume_cc']) ---
+Specifier atoms:   [['age', '>=', 18.0], ['prostate_volume_cc', '>', 100.0]]
+Implementer atoms: [['age', '>=', 18.0], ['prostate_volume_cc', '==', 100.0]]
+
+--- Specifier's Dafny predicate (gpt-4.1-nano) ---
+predicate MatchSpec(age: int, prostate_volume_cc: real)
+{
+    age >= 18 && prostate_volume_cc > 100.0
+}
+
+--- Implementer's Dafny method (gpt-4.1-mini) ---
+method CheckEligibility(age: int, prostate_volume_cc: real) returns (eligible: bool)
+  ensures eligible == MatchSpec(age, prostate_volume_cc)
+{
+  eligible := age >= 18 && prostate_volume_cc == 100.0;
+}
+
+--- NCT01639664 (contradiction on ['age']) ---
+Specifier atoms:   [['age', '<', 14.0], ['max_life_expectancy_years', '<', 0.25]]
+Implementer atoms: [['age', '>=', 14.0], ['min_life_expectancy_months', '>=', 3.0]]
+
+--- Specifier's Dafny predicate (gpt-4.1-nano) ---
+predicate MatchSpec(age: int, max_life_expectancy_years: int)
+{
+    age < 14 && max_life_expectancy_years < 0
+}
+
+--- Implementer's Dafny method (gpt-4.1-mini) ---
+method CheckEligibility(age: int, max_life_expectancy_years: int) returns (eligible: bool)
+  ensures eligible == MatchSpec(age, max_life_expectancy_years)
+{
+  var min_life_expectancy_months := 3;
+  if age >= 14 && max_life_expectancy_years * 12 >= min_life_expectancy_months {
+    eligible := true;
+  } else {
+    eligible := false;
+  }
+}
+
+--- NCT01715584 (contradiction on ['min_creatinine_clearance_ml_min', 'min_left_ventricular_ejection_fraction']) ---
+Specifier atoms:   [['age', '>', 40.0], ['max_age', '<=', 80.0], ['min_left_ventricular_ejection_fraction', '<', 50.0], ['min_creatinine_clearance_ml_min', '<', 60.0]]
+Implementer atoms: [['age', '>', 40.0], ['age', '<=', 80.0], ['min_left_ventricular_ejection_fraction', '>=', 50.0], ['min_creatinine_clearance_ml_min', '>=', 60.0]]
+
+--- Specifier's Dafny predicate (gpt-4.1-nano) ---
+predicate MatchSpec(age: int, max_age: int, min_left_ventricular_ejection_fraction: real, min_creatinine_clearance_ml_min: real)
+{
+    age > 40 && age <= max_age && max_age <= 80 &&
+    min_left_ventricular_ejection_fraction < 50.0 &&
+    min_creatinine_clearance_ml_min < 60.0
+}
+
+--- Implementer's Dafny method (gpt-4.1-mini) ---
+method CheckEligibility(age: int, max_age: int, min_left_ventricular_ejection_fraction: real, min_creatinine_clearance_ml_min: real) returns (eligible: bool)
+  ensures eligible == MatchSpec(age, max_age, min_left_ventricular_ejection_fraction, min_creatinine_clearance_ml_min)
+{
+  eligible := (age > 40) && (age <= 80) && (min_left_ventricular_ejection_fraction >= 50.0) && (min_creatinine_clearance_ml_min >= 60.0);
+}
+
+--- NCT01943812 (contradiction on ['bmi', 'endometrial_thickness_mm']) ---
+Specifier atoms:   [['endometrial_thickness_mm', '>=', 7.0], ['age', '>=', 18.0], ['age', '<=', 45.0], ['bmi', '<=', 30.0], ['bmi', '>', 18.5], ['cycle_length_days', '>=', 25.0], ['cycle_length_days', '<=', 34.0]]
+Implementer atoms: [['endometrial_thickness_mm', '==', 7.0], ['age', '>=', 18.0], ['age', '<=', 45.0], ['bmi', '>', 18.5], ['bmi', '<', 30.0], ['cycle_length_days', '>=', 25.0], ['cycle_length_days', '<=', 34.0]]
+
+--- Specifier's Dafny predicate (gpt-4.1-nano) ---
+predicate MatchSpec(endometrial_thickness_mm: real, age: int, bmi: real, cycle_length_days: int)
+{
+    endometrial_thickness_mm >= 7.0 &&
+    18 <= age <= 45 &&
+    18.5 < bmi <= 30.0 &&
+    25 <= cycle_length_days <= 34
+}
+
+--- Implementer's Dafny method (gpt-4.1-mini) ---
+method CheckEligibility(endometrial_thickness_mm: real, age: int, bmi: real, cycle_length_days: int) returns (eligible: bool)
+  ensures eligible == MatchSpec(endometrial_thickness_mm, age, bmi, cycle_length_days)
+{
+  var thickness_ok := endometrial_thickness_mm == 7.0;
+  var age_ok := age >= 18 && age <= 45;
+  var bmi_ok := bmi > 18.5 && bmi < 30.0;
+  var cycle_ok := cycle_length_days >= 25 && cycle_length_days <= 34;
+
+  eligible := thickness_ok && age_ok && bmi_ok && cycle_ok;
+}
+
+--- NCT02202369 (contradiction on ['age']) ---
+Specifier atoms:   [['age', '<', 70.0], ['age', '>', 18.0], ['preoperative_chronic_opiate_use_mg_per_day', '>', 30.0]]
+Implementer atoms: [['age', '>=', 18.0], ['age', '<', 70.0], ['max_opioid_morphine_equivalents_mg_per_day', '<=', 30.0], ['min_egfr_ml_min', '>=', 60.0]]
+
+--- Specifier's Dafny predicate (gpt-4.1-nano) ---
+predicate MatchSpec(age: int, preoperative_chronic_opiate_use_mg_per_day: real)
+{
+    age > 18 && age < 70 && preoperative_chronic_opiate_use_mg_per_day > 30.0
+}
+
+--- Implementer's Dafny method (gpt-4.1-mini) ---
+method CheckEligibility(age: int, preoperative_chronic_opiate_use_mg_per_day: real) returns (eligible: bool)
+  ensures eligible == MatchSpec(age, preoperative_chronic_opiate_use_mg_per_day)
+{
+  eligible := age >= 18 && age < 70 && preoperative_chronic_opiate_use_mg_per_day <= 30.0;
+}
+
+--- NCT02558504 (contradiction on ['age']) ---
+Specifier atoms:   [['age', '<', 18.0], ['max_lesion_length_cm', '<=', 12.0]]
+Implementer atoms: [['age', '>=', 18.0], ['asa_classification', '>=', 1.0], ['asa_classification', '<=', 2.0], ['min_lesion_length_cm', '>=', 1.0], ['max_lesion_length_cm', '<=', 12.0], ['max_inr', '<=', 1.3], ['min_platelet_count', '>=', 75000.0], ['min_life_expectancy_months', '>=', 36.0], ['min_egfr_ml_min', '>=', 60.0], ['max_time_since_heart_attack_months', '>', 6.0], ['max_severe_distal_arteriopathy_stage', '<=', 2.0]]
+
+--- Specifier's Dafny predicate (gpt-4.1-nano) ---
+predicate MatchSpec(age: int, max_lesion_length_cm: real)
+{
+    age < 18 && max_lesion_length_cm <= 12.0
+}
+
+--- Implementer's Dafny method (gpt-4.1-mini) ---
+method CheckEligibility(age: int, max_lesion_length_cm: real) returns (eligible: bool)
+  ensures eligible == MatchSpec(age, max_lesion_length_cm)
+{
+  var age_ok := age >= 18;
+  var lesion_length_ok := max_lesion_length_cm <= 12.0;
+  eligible := age_ok && lesion_length_ok;
+}
+
+--- NCT02612181 (contradiction on ['age', 'max_systolic_blood_pressure', 'max_mean_arterial_pressure']) ---
+Specifier atoms:   [['age', '<', 18.0], ['heart_rate_less_than', '<', 55.0], ['max_systolic_blood_pressure', '<', 80.0], ['max_mean_arterial_pressure', '<', 50.0]]
+Implementer atoms: [['age', '>=', 18.0], ['heart_rate_less_than', '<', 55.0], ['max_systolic_blood_pressure', '>=', 80.0], ['max_mean_arterial_pressure', '>=', 50.0]]
+
+--- Specifier's Dafny predicate (gpt-4.1-nano) ---
+predicate MatchSpec(age: int, heart_rate_less_than: int, max_systolic_blood_pressure: real, max_mean_arterial_pressure: real)
+{
+    age < 18 &&
+    heart_rate_less_than < 55 &&
+    max_systolic_blood_pressure < 80.0 &&
+    max_mean_arterial_pressure < 50.0
+}
+
+--- Implementer's Dafny method (gpt-4.1-mini) ---
+method CheckEligibility(age: int, heart_rate_less_than: int, max_systolic_blood_pressure: real, max_mean_arterial_pressure: real) returns (eligible: bool)
+  ensures eligible == MatchSpec(age, heart_rate_less_than, max_systolic_blood_pressure, max_mean_arterial_pressure)
+{
+  var age_ok := age >= 18;
+  var heart_rate_ok := heart_rate_less_than < 55;
+  var systolic_ok := max_systolic_blood_pressure >= 80.0;
+  var map_ok := max_mean_arterial_pressure >= 50.0;
+  eligible := age_ok && heart_rate_ok && systolic_ok && map_ok;
+}
+
+--- NCT02774317 (contradiction on ['age']) ---
+Specifier atoms:   [['age', '<=', 6.0], ['max_inr', '>=', 1.5]]
+Implementer atoms: [['age', '<=', 0.5], ['max_inr', '>=', 1.5]]
+
+--- Specifier's Dafny predicate (gpt-4.1-nano) ---
+predicate MatchSpec(age: int, max_inr: real)
+{
+    age <= 6 && max_inr >= 1.5
+}
+
+--- Implementer's Dafny method (gpt-4.1-mini) ---
+method CheckEligibility(age: int, max_inr: real) returns (eligible: bool)
+  ensures eligible == MatchSpec(age, max_inr)
+{
+  eligible := (age <= 0) && (max_inr >= 1.5);
+}
+
+--- NCT02859480 (contradiction on ['max_ast_alt_uln', 'max_serum_creatinine', 'max_alt_uln']) ---
+Specifier atoms:   [['max_serum_creatinine', '>', 2.0], ['max_ast_alt_uln', '>=', 3.0], ['max_alt_uln', '>=', 3.0], ['max_life_expectancy_years', '<', 1.0]]
+Implementer atoms: [['max_serum_creatinine', '<=', 2.0], ['max_ast_alt_uln', '<=', 3.0], ['max_alt_uln', '<=', 3.0], ['min_life_expectancy_months', '>=', 12.0]]
+
+--- Specifier's Dafny predicate (gpt-4.1-nano) ---
+predicate MatchSpec(max_serum_creatinine: real, max_ast_alt_uln: real, max_alt_uln: real, max_life_expectancy_years: int)
+{
+    max_serum_creatinine > 2.0 &&
+    max_ast_alt_uln >= 3.0 &&
+    max_alt_uln >= 3.0 &&
+    max_life_expectancy_years < 1
+}
+
+--- Implementer's Dafny method (gpt-4.1-mini) ---
+method CheckEligibility(max_serum_creatinine: real, max_ast_alt_uln: real, max_alt_uln: real, max_life_expectancy_years: int) returns (eligible: bool)
+  ensures eligible == MatchSpec(max_serum_creatinine, max_ast_alt_uln, max_alt_uln, max_life_expectancy_years)
+{
+  var min_life_expectancy_months := max_life_expectancy_years * 12;
+  eligible := max_serum_creatinine <= 2.0 && max_ast_alt_uln <= 3.0 && max_alt_uln <= 3.0 && min_life_expectancy_months >= 12;
+}
+
+--- NCT02939209 (contradiction on ['bmi']) ---
+Specifier atoms:   [['age', '<=', 65.0], ['age', '>=', 18.0], ['renal_function_gfr_threshold', '<=', 60.0], ['bmi', '>', 35.0]]
+Implementer atoms: [['age', '>=', 18.0], ['age', '<=', 65.0], ['min_creatinine_clearance_ml_min', '>=', 60.0], ['bmi', '<=', 35.0]]
+
+--- Specifier's Dafny predicate (gpt-4.1-nano) ---
+predicate MatchSpec(age: int, renal_function_gfr_threshold: real, bmi: real)
+{
+    18 <= age && age <= 65 && renal_function_gfr_threshold <= 60.0 && bmi > 35.0
+}
+
+--- Implementer's Dafny method (gpt-4.1-mini) ---
+method CheckEligibility(age: int, renal_function_gfr_threshold: real, bmi: real) returns (eligible: bool)
+  ensures eligible == MatchSpec(age, renal_function_gfr_threshold, bmi)
+{
+  var age_ok := (age >= 18) && (age <= 65);
+  var renal_ok := renal_function_gfr_threshold >= 60.0;
+  var bmi_ok := bmi <= 35.0;
+  eligible := age_ok && renal_ok && bmi_ok;
+}
+
+--- NCT02969187 (contradiction on ['bmi']) ---
+Specifier atoms:   [['bmi', '<', 35.0], ['bmi', '>', 60.0], ['asa_classification', '>', 3.0]]
+Implementer atoms: [['bmi', '>=', 35.0], ['bmi', '<=', 60.0], ['methylprednisolone_prednisone_daily_dose_mg', '<', 60.0], ['methylprednisolone_prednisone_doses_per_day', '<', 3.0], ['asa_physical_status_max', '<=', 3.0]]
+
+--- Specifier's Dafny predicate (gpt-4.1-nano) ---
+predicate MatchSpec(bmi: real, asa_classification: int)
+{
+    bmi < 35.0 && bmi > 60.0 && asa_classification > 3
+}
+
+--- Implementer's Dafny method (gpt-4.1-mini) ---
+method CheckEligibility(bmi: real, asa_classification: int) returns (eligible: bool)
+  ensures eligible == MatchSpec(bmi, asa_classification)
+{
+  eligible := (bmi >= 35.0 && bmi <= 60.0) && (asa_classification <= 3);
+}
+
+--- NCT03012984 (contradiction on ['stop_bang_score']) ---
+Specifier atoms:   [['age', '>=', 65.0], ['age', '<', 90.0], ['expected_duration_of_surgery_hours', '>=', 2.0], ['stop_bang_score', '>=', 3.0]]
+Implementer atoms: [['age', '>=', 65.0], ['age', '<', 90.0], ['expected_duration_of_surgery_hours', '>=', 2.0], ['stop_bang_score', '<', 3.0], ['min_left_ventricular_ejection_fraction', '>=', 30.0], ['heart_rate_beats_per_minute', '>=', 50.0]]
+
+--- Specifier's Dafny predicate (gpt-4.1-nano) ---
+predicate MatchSpec(age: int, expected_duration_of_surgery_hours: real, stop_bang_score: int)
+{
+    65 <= age && age < 90 &&
+    2.0 <= expected_duration_of_surgery_hours &&
+    3 <= stop_bang_score
+}
+
+--- Implementer's Dafny method (gpt-4.1-mini) ---
+method CheckEligibility(age: int, expected_duration_of_surgery_hours: real, stop_bang_score: int) returns (eligible: bool)
+  ensures eligible == MatchSpec(age, expected_duration_of_surgery_hours, stop_bang_score)
+{
+  var age_ok := age >= 65 && age < 90;
+  var duration_ok := expected_duration_of_surgery_hours >= 2.0;
+  var stop_bang_ok := stop_bang_score < 3;
+  eligible := age_ok && duration_ok && stop_bang_ok;
+}
+
+--- NCT03013790 (contradiction on ['age']) ---
+Specifier atoms:   [['age', '>', 65.0], ['max_inr', '<=', 3.0]]
+Implementer atoms: [['age', '>=', 65.0], ['max_inr', '<=', 3.0], ['min_life_expectancy_months', '>=', 0.0625]]
+
+--- Specifier's Dafny predicate (gpt-4.1-nano) ---
+predicate MatchSpec(age: int, max_inr: real)
+{
+    age > 65 && max_inr <= 3.0
+}
+
+--- Implementer's Dafny method (gpt-4.1-mini) ---
+method CheckEligibility(age: int, max_inr: real) returns (eligible: bool)
+  ensures eligible == MatchSpec(age, max_inr)
+{
+  var meets_age := age >= 65;
+  var meets_inr := max_inr <= 3.0;
+  eligible := meets_age && meets_inr;
+}
+
+--- NCT03126214 (contradiction on ['max_systolic_blood_pressure']) ---
+Specifier atoms:   [['age', '>=', 65.0], ['cerebrovascular_lesion_exclusion_months', '<=', 0.0], ['max_systolic_blood_pressure', '<=', 160.0], ['max_alcohol_units_per_week_male', '<=', 28.0], ['max_alcohol_units_per_week_female', '<=', 21.0], ['max_severe_distal_arteriopathy_stage', '<=', 5.0]]
+Implementer atoms: [['age', '>=', 65.0], ['max_systolic_blood_pressure', '<', 160.0], ['max_alcohol_units_per_week_male', '<=', 28.0], ['max_alcohol_units_per_week_female', '<=', 21.0], ['min_creatinine_clearance_ml_min', '>=', 15.0], ['min_left_ventricular_ejection_fraction', '>=', 0.4], ['beck_depression_inventory_score_limit', '<=', 5.0]]
+
+--- Specifier's Dafny predicate (gpt-4.1-nano) ---
+predicate MatchSpec(age: int, cerebrovascular_lesion_exclusion_months: int, max_systolic_blood_pressure: real, max_alcohol_units_per_week_male: int, max_alcohol_units_per_week_female: int, max_severe_distal_arteriopathy_stage: int)
+{
+    age >= 65 &&
+    cerebrovascular_lesion_exclusion_months <= 0 &&
+    max_systolic_blood_pressure <= 160.0 &&
+    max_alcohol_units_per_week_male <= 28 &&
+    max_alcohol_units_per_week_female <= 21 &&
+    max_severe_distal_arteriopathy_stage <= 5
+}
+
+--- Implementer's Dafny method (gpt-4.1-mini) ---
+method CheckEligibility(age: int, cerebrovascular_lesion_exclusion_months: int, max_systolic_blood_pressure: real, max_alcohol_units_per_week_male: int, max_alcohol_units_per_week_female: int, max_severe_distal_arteriopathy_stage: int) returns (eligible: bool)
+  ensures eligible == MatchSpec(age, cerebrovascular_lesion_exclusion_months, max_systolic_blood_pressure, max_alcohol_units_per_week_male, max_alcohol_units_per_week_female, max_severe_distal_arteriopathy_stage)
+{
+  var age_ok := age >= 65;
+  var bp_ok := max_systolic_blood_pressure < 160.0;
+  var alcohol_ok := (max_alcohol_units_per_week_male <= 28) && (max_alcohol_units_per_week_female <= 21);
+  eligible := age_ok && bp_ok && alcohol_ok;
+}
+
+--- NCT03472495 (contradiction on ['max_systolic_blood_pressure']) ---
+Specifier atoms:   [['age', '>=', 18.0], ['heart_rate_greater_than', '>', 110.0], ['max_systolic_blood_pressure', '<=', 90.0], ['heart_rate_less_than', '<', 60.0]]
+Implementer atoms: [['age', '>=', 18.0], ['heart_rate_beats_per_minute', '<', 60.0], ['max_systolic_blood_pressure', '>=', 90.0]]
+
+--- Specifier's Dafny predicate (gpt-4.1-nano) ---
+predicate MatchSpec(age: int, heart_rate_greater_than: int, max_systolic_blood_pressure: real, heart_rate_less_than: int)
+{
+  age >= 18 &&
+  heart_rate_greater_than > 110 &&
+  max_systolic_blood_pressure <= 90.0 &&
+  heart_rate_less_than < 60
+}
+
+--- Implementer's Dafny method (gpt-4.1-mini) ---
+method CheckEligibility(age: int, heart_rate_greater_than: int, max_systolic_blood_pressure: real, heart_rate_less_than: int) returns (eligible: bool)
+  ensures eligible == MatchSpec(age, heart_rate_greater_than, max_systolic_blood_pressure, heart_rate_less_than)
+{
+  var age_ok := age >= 18;
+  var heart_rate_ok := heart_rate_less_than < 60;
+  var bp_ok := max_systolic_blood_pressure >= 90.0;
+  eligible := age_ok && heart_rate_ok && bp_ok;
+}
+
+========================================================================
+11. PAPER-READY SUMMARY
+========================================================================
+Attempted documents: 96
+Semantic denominator: 83
+Genuine agreement: 44/83 (53.0%)
+Agreement over attempted: 44/96 (45.8%)
+Corrected agreement: 44/83 (53.0%)
+Mean Implementer coverage: 76.4% (N=83)
+Verification-gaming cases: 0
+Mutation adequacy: 43/44 (97.7%)
+
+Aggregation completed successfully.
