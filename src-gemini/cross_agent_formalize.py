@@ -98,7 +98,7 @@ def autoformalize_cross(atoms_a, atoms_b, logic,
     )
     spec_code = _strip_code_fences(spec_resp.choices[0].message.content)
     # spec_code is now FROZEN -- never regenerated, never overwritten,
-    # never sent to the repair step to "return alongside" the fix. It
+    # never sent to the repair step to "return alongside" the repair. It
     # is concatenated fresh into dafny_source on every single attempt.
 
     impl_prompt = IMPLEMENTER_CROSS_SYSTEM_PROMPT.format(

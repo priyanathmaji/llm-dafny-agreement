@@ -24,7 +24,6 @@ from typing import Optional
 # marker check (parens, "if", "unless", etc.) before this regex even runs.
 INEQUALITY_RE = re.compile(r'^\s*(>=|<=|>|<|==)\s*([\d.]+)\s*(?:[a-zA-Z%][a-zA-Z0-9%/\s]*)?\s*$')
 
-# Fixed taxonomy type declarations, centralized in taxonomy.py so
 # Stage 1's LLM prompt and gold_extraction.py's alignment table can
 # never silently drift apart from each other.
 from taxonomy import TAXONOMY_INT_VARS, TAXONOMY_VAR_NAMES, TAXONOMY_ANCHOR_KEYWORDS
@@ -77,7 +76,7 @@ def normalize_stage1_output(raw_dict: dict, source_text: str = None) -> Normaliz
     schema = NormalizedSchema()
 
     for var, value in raw_dict.items():
-        # Reject any key not in the fixed taxonomy outright -- Stage 1
+        # Reject any key outside the allowed taxonomy outright -- Stage 1
         # is instructed to use ONLY the given variable names, but
         # nothing previously enforced this, so an invented key (seen
         # in practice: "max_ast_alt_uln_liver_metastases") could

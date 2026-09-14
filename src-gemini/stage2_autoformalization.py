@@ -31,7 +31,7 @@ load_dotenv(dotenv_path=env_path)
 # Max internal consensus loops
 K_MAX_ATTEMPTS = 15
 DAFNY_SOLVER_PATH = os.environ.get(
-    "DAFNY_SOLVER_PATH", r"C:\Users\admin\.conda\envs\cs7643-a3-nlp\bin\z3.EXE"
+    "DAFNY_SOLVER_PATH", r"C:\Users\admin\.conda\envs\<folder>\bin\z3.EXE"
 )
 
 # =====================================================================

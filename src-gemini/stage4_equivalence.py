@@ -21,23 +21,6 @@ def _build_z3_formula(atoms: list, logic: str, var_pool: dict):
     def atom_expr(a):
         v = var_for(a)
 
-        ### DELETE THIS BLOCK: The following was a shortcut fix that caused a false positive in the pipeline ###
-        # # ─── THE DEFINITIVE CELL-COUNT SCALE PATCH ───
-        # # Normalize structural unit differences (e.g., 100 vs 100000 for platelets)
-        # # when a base token scale enters the solver without its multiplier node.
-        # target_value = a.value
-        # if any(cell_kw in a.var for cell_kw in ["platelet", "wbc"]) and target_value <= 1000.0:
-        #     target_value *= 1000.0
-        # # ─────────────────────────────────────────────
-        
-        # return {
-        #     ">=": v >= target_value,
-        #     "<=": v <= target_value,
-        #     ">": v > target_value,
-        #     "<": v < target_value,
-        #     "==": v == target_value,
-        # }[a.op]
-
         return {
             ">=": v >= a.value,
             "<=": v <= a.value,

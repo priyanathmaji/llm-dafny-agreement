@@ -38,10 +38,6 @@ def categorize(atoms_a, atoms_b, result):
                                 or "resolution/type errors" in stdout_lower):
         return "GENERATION_FAILURE"
 
-    # FIXED: multiset per variable, not last-write-wins single value --
-    # a variable with two atoms (a range) was previously collapsing to
-    # one entry, causing a missing second bound to be mis-scored as a
-    # contradiction instead of a coverage gap.
     by_var_a = defaultdict(set)
     by_var_b = defaultdict(set)
     for a in atoms_a:
@@ -193,7 +189,6 @@ def main(subsample_path: str = "high_tier_subsample_96.jsonl",
     for cat, n in sorted(counts.items()):
         print(f"  {cat:>32}: {n} ({n/total:.1%})")
 
-    # FIXED: reference the categories categorize() actually returns
     n_semantically_evaluated = (counts["GENUINE_AGREEMENT"]
                                  + counts["NON_CONVERGENT_COVERAGE_GAP"]
                                  + counts["NON_CONVERGENT_DIRECT_CONTRADICTION"])
