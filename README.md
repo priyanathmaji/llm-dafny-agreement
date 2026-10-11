@@ -230,10 +230,10 @@ Additional files and analysis scripts supporting the evaluation are included in 
 If you use this code or evaluation protocol, please cite:
 
 ```bibtex
-@inproceedings{anonymous2026verification,
+@inproceedings{pmaji,
   title     = {When Verification Is Not Agreement: Cross-Agent LLM-to-Dafny Formalization},
-  author    = {Anonymous},
-  booktitle = {NeurIPS 2026 Workshop},
+  author    = {Priyanath Maji},
+  booktitle = {NeurIPS 2026 Workshop: AI for Verifiable Coding},
   year      = {2026}
 }
 ```
